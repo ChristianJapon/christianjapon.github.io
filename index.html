@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es" class="is-locked">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un espacio para ti</title>
+
+  <!-- Google Fonts: Playfair Display (títulos) + Montserrat (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="is-locked">
+
+  <!-- ============================= -->
+  <!-- PORTÓN DE ENTRADA (audio local + revelado de la página) -->
+  <!-- Coloca tu archivo de música en: assets/audio/musica-de-fondo.mp3 -->
+  <!-- ============================= -->
+  <div class="audio-gate" id="audioGate">
+    <div class="audio-gate__sky" aria-hidden="true"></div>
+    <button type="button" class="audio-gate__button" id="gateButton">
+      Enciende la magia antes de continuar <span aria-hidden="true">✨</span>
+    </button>
+  </div>
+
+  <!-- Audio oculto: reemplaza el src por tu archivo local -->
+  <audio id="bgAudio" loop preload="auto" hidden>
+    <source src="assets/audio/Beginning_Middle_End.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ============================= -->
+  <!-- HERO SECTION -->
+  <!-- ============================= -->
+  <section id="hero" class="hero">
+    <div class="hero__sky" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal"><!-- Reemplaza con tu frase de introducción -->Un pequeño destello de luz en medio de la noche.</p>
+      <h1 class="hero__title reveal">Hola mi amor, mi Ale hermosa, mi Brujilda jeje</h1>
+      <p class="hero__subtitle reveal"><!-- Reemplaza con tu dedicatoria -->Mi principio, mi medio y mi fin. Un rincón digital creado para ti, para que vengas siempre que necesites recordar tu propia luz.</p>
+    </div>
+
+    <a href="#capitulos" class="hero__scroll reveal" aria-label="Desplázate hacia abajo">
+      <span class="hero__scroll-text">Desliza</span>
+      <span class="hero__scroll-arrow" aria-hidden="true">↓</span>
+    </a>
+  </section>
+
+  <!-- ============================= -->
+  <!-- CAPÍTULOS DE NOSOTROS (Línea del tiempo con carrusel auto-play) -->
+  <!-- ============================= -->
+  <section id="capitulos" class="chapters">
+    <div class="section-heading reveal">
+      <h2 class="section-title">Capítulos de Nosotros</h2>
+      <p class="section-subtitle"><!-- Reemplaza -->Cada paso que dimos fue una linterna elevándose en nuestro propio cielo.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__line" aria-hidden="true"></div>
+
+      <!-- Etapa 1 -->
+      <article class="timeline__item reveal">
+        <div class="timeline__dot" aria-hidden="true"></div>
+        <div class="timeline__card glass">
+          <span class="timeline__date"><!-- Reemplaza --> Ahi en un 2024 entre seotiembre y agosto</span>
+          <h3 class="timeline__title">El Flechazo</h3>
+
+          <!-- Carrusel: scroll-snap nativo + auto-play (assets/js/script.js).
+               Reemplaza cada <span class="carousel__placeholder"> por:
+               <img src="assets/img/flechazo-1.jpg" alt="..."> -->
+          <div class="carousel" data-carousel>
+            <ul class="carousel__track" data-carousel-track>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/flechazo1.jpeg" alt="Imagen 1"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/flechazo2.jpeg" alt="Imagen 2"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/flechazo3.jpeg" alt="Imagen 3"></span></li>
+            </ul>
+          </div>
+
+          <p class="timeline__text"><!-- Reemplaza -->Todo comenzó en aquellas reuniones familiares donde, al principio, solo nos saludábamos de lejos, sin nada en particular. Pero poco a poco, me fui fijando más en ti. Empezaste a ir más seguido a la casa para llevarle a la suca a la casa, y de pronto, verte se volvió el momento que yo más esperaba.
+Luego llegó ese día, alrededor del 2 de octubre de 2024. Hubo aquel pequeño incidente donde le robaron el celu a la suca, y decían que esa noche iba a haber una luna roja. Para animar el ambiente, empecé a hacer bromas sobre salir a la calle a tomar fotos, jugando con la ironía del teléfono robado. Todos nos reímos, pero en medio de ese momento pasó algo que lo cambió todo: me quedé viéndote reír. Tu sonrisa se vio tan auténtica, tan tuya, que hizo latir mi corazón de una forma completamente nueva.
+Creo que desde ese instante se dio el flechazo. A partir de ahí, no podía pensar en nadie más; mañana, tarde y noche esperaba verte. Te empecé a seguir por Instagram, fui un buen estalker jaja y a dejar pequeñas indirectas, escribiendo cosas como "hoy vi a la niña de mis ojos". Y aunque todo empezó con una simple broma bajo la idea de una luna roja, ese fue el momento exacto en el que me cautivaste por completo.
+</p>
+        </div>
+      </article>
+
+      <!-- Etapa 2 -->
+      <article class="timeline__item reveal">
+        <div class="timeline__dot" aria-hidden="true"></div>
+        <div class="timeline__card glass">
+          <span class="timeline__date">Nuestros primeros pasos</span>
+          <h3 class="timeline__title">Lo Construido</h3>
+
+          <div class="carousel" data-carousel>
+            <ul class="carousel__track" data-carousel-track>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio1.jpeg" alt="Imagen 1"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio2.jpeg" alt="Imagen 2"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio4.jpeg" alt="Imagen 4"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio3.jpeg" alt="Imagen 3"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio5.jpeg" alt="Imagen 5"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio6.jpeg" alt="Imagen 6"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio7.jpeg" alt="Imagen 7"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio8.jpeg" alt="Imagen 8"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio9.jpeg" alt="Imagen 9"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio10.jpeg" alt="Imagen 10"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio11.jpeg" alt="Imagen 11"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio12.jpeg" alt="Imagen 12"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio13.jpeg" alt="Imagen 13"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio14.jpeg" alt="Imagen 14"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio15.jpeg" alt="Imagen 15"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio16.jpeg" alt="Imagen 16"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio17.jpeg" alt="Imagen 17"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio18.jpeg" alt="Imagen 18"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio19.jpeg" alt="Imagen 19"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio20.jpeg" alt="Imagen 20"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/construdio21.jpeg" alt="Imagen 21"></span></li>
+
+            </ul>
+          </div>
+
+          <p class="timeline__text">Luego de ese primer flechazo, decidimos arriesgarnos. Recuerdo tanto ese 10 de octubre de 2024 con nuestras notas en Instagram: un corazón y tu respuesta, "El que no arriesga no gana". Ahí empezó todo. Empezamos a hablar y llegó ese mágico 14 de octubre. Siempre me va a dar ternura recordar cómo inventaste que ibas a recargar la tarjeta del bus solo para poder salir a verme, cómo nos desencontramos por un momento en la calle, hasta que por fin nos vimos. Ese primer beso no fue uno cualquiera; tuvo algo que se sintió increíblemente real desde el primer segundo.
+A partir de ahí, los días se llenaron de ti. Empezamos a compartir de todo: desde ir a tu casa para que me prestaran luz en época de apagones —momentos llenos de risas y donde me hacías compañía mientras trabajaba—, hasta salir a comer, caminar de la mano y cantar en aquel concierto del 2 de noviembre. Construimos una confianza tan bonita que pudimos ser transparentes, contarnos nuestras cosas y entendernos sin juzgarnos nunca.
+El 25 de julio decidimos dar el siguiente paso y formalizar lo nuestro, porque lo que sentíamos ya era inmenso. Atesoro cada recuerdo de esta etapa: nuestras llamadas hasta quedarnos dormidos, las tardes viendo películas de Disney o A todos los chicos de los que me enamoré, y las veces que cocinamos juntos.
+Me diste el mejor cumpleaños de mi vida esperándome con el cuarto adornado, y me entregaste los regalos que más valor tienen para mí: tus tarjetas pintadas a mano, ese Chimuelo de origami que hiciste con tanta dedicación y la cadenita con tu inicial. Yo también quise hacerte sentir única llevándote aquella serenata en tu día. Todo lo que hemos construido y compartido ha sido hermoso, y es el reflejo de un cariño genuino y profundo que siempre voy a atesorar.
+</p>
+        </div>
+      </article>
+
+      <!-- Etapa 3 -->
+      <article class="timeline__item reveal">
+        <div class="timeline__dot" aria-hidden="true"></div>
+        <div class="timeline__card glass">
+          <span class="timeline__date">Nuestro camino</span>
+          <h3 class="timeline__title">El Presente</h3>
+
+          <div class="carousel" data-carousel>
+            <ul class="carousel__track" data-carousel-track>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/presente.jpeg" alt="Imagen 1"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/presente1.jpeg" alt="Imagen 2"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/presente2.jpeg" alt="Imagen 3"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/presente3.jpeg" alt="Imagen 4"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/presente4.jpeg" alt="Imagen 5"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/presente5.jpeg" alt="Imagen 6"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/presente6.jpeg" alt="Imagen 7"></span></li>
+            </ul>
+          </div>
+
+          <p class="timeline__text">Sé que en este momento la vida te exige mucho y que necesitabas tomar un espacio para ti, para poder sanar y sentirte bien contigo misma. Quiero que sepas que entiendo y respeto profundamente esa decisión. Aunque nuestra dinámica haya cambiado, valoro inmensamente que el cariño genuino siga presente. Atesoro que sigas preocupándote por mí, que me sigas diciendo Chris, y esos pequeños gestos únicos como cuando me muerdes y dejas unos moretonsotes jajaj, aunque duela duele rico jajaj, que son tu forma tan especial de hablar sin palabras.
+Mi intención con esto no es acelerar las cosas, ni obligarte a nada, ni poner un peso más sobre tus hombros. Solo quiero que tengas la tranquilidad de saber que lo que siento por ti sigue siendo completamente real y verdadero. Mi mayor deseo ahora mismo es que encuentres el bienestar y la paz que buscas, sabiendo que aquí tienes a alguien que te respeta, valora tu espacio y te apoya incondicionalmente en tu propio proceso.
+</p>
+        </div>
+      </article>
+
+      <!-- Etapa 4 -->
+      <article class="timeline__item reveal">
+        <div class="timeline__dot" aria-hidden="true"></div>
+        <div class="timeline__card glass">
+          <span class="timeline__date">Nuestro propio Beginning Middle End</span>
+          <h3 class="timeline__title">El Futuro</h3>
+
+          <div class="carousel" data-carousel>
+            <ul class="carousel__track" data-carousel-track>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/futuro1.png" alt="Imagen 1"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/futuro2.png" alt="Imagen 2"></span></li>
+              <li class="carousel__slide"><span class="carousel__placeholder"><img src="assets/img/futuro3.png" alt="Imagen 3"></span></li>
+            </ul>
+          </div>
+
+          <p class="timeline__text">Sé que el futuro es incierto y que la vida da muchas vueltas, pero si miro hacia adelante desde lo más profundo de mi corazón, en mi proyecto de vida siempre hay un lugar guardado para ti. Creo profundamente en el amor que nos tenemos y en todo lo que hemos construido. Sé que los caminos tienen retos y cosas por superar, pero mi deseo más sincero es que podamos caminar a través de ellos juntos, viéndonos crecer y siendo un refugio el uno para el otro.
+Quiero que sepas que aquí tienes un lugar seguro. No te digo todo esto para presionarte, para exigir que vuelvas a ser la de antes, ni para que me des una respuesta ahora mismo. Sé que mis palabras últimamente han podido sentirse como un peso, y lo que menos quiero es agobiarte. Te digo todo esto únicamente porque quiero que tengas la certeza absoluta de que, a pesar de la distancia o del momento que estamos atravesando, yo estoy para ti, igual que sé que tú estás para mí.
+Tómate el tiempo y el espacio que necesites para ti, para tus metas, para respirar y sentirte bien contigo misma. Mientras tanto, yo también seguiré trabajando en mí, para que cuando pienses en nosotros, solo sientas paz. Y si en algún momento, cuando te sientas lista y ligera, decides que quieres que sigamos compartiendo la vida, aquí estaré: con los brazos abiertos, sin reproches, listo para escucharte y cuidarte siempre.
+</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- EL REFUGIO DIGITAL -->
+  <!-- ============================= -->
+  <section id="refugio-digital" class="refuge">
+    <div class="section-heading reveal">
+      <h2 class="section-title">Un Refugio Digital</h2>
+      <p class="section-subtitle">Abre Esto Cuando...</p>
+    </div>
+
+    <div class="refuge__grid">
+
+      <button class="flip-card glass tulip-frame reveal" type="button" aria-expanded="false">
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__face--front">
+            <span class="flip-card__icon" aria-hidden="true">✦</span>
+            <p class="flip-card__prompt">Abre esto cuando sientas que el tiempo no te alcanza </p>
+          </div>
+          <div class="flip-card__face flip-card__face--back">
+            <p class="flip-card__message"><!-- Reemplaza -->Te lo he dicho antes y te lo repito: tu prioridad debes ser tú, tu familia y tus metas. Entiendo perfectamente tus tiempos y quiero que sepas que el amor que te tengo no disminuye por no poder vernos a diario. Siempre tienes un lugar en mi corazón, sin exigencias y sin apuros.</p>
+          </div>
+        </div>
+      </button>
+
+      <button class="flip-card glass tulip-frame reveal" type="button" aria-expanded="false">
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__face--front">
+            <span class="flip-card__icon" aria-hidden="true">✦</span>
+            <p class="flip-card__prompt">Abre esto cuando necesites un espacio seguro (Sin juicios ni soluciones)</p>
+          </div>
+          <div class="flip-card__face flip-card__face--back">
+            <p class="flip-card__message"> Cuando el mundo se vuelva pesado, no te guardes las cosas por miedo a abrumarme. Esta es mi promesa: cuando necesites hablar, solo te escucharé, te abrazaré y sostendré tu mano. No intentaré darte lecciones ni arreglarlo todo; solo seré tu lugar seguro para desahogarte.</p>
+          </div>
+        </div>
+      </button>
+
+      <button class="flip-card glass tulip-frame reveal" type="button" aria-expanded="false">
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__face--front">
+            <span class="flip-card__icon" aria-hidden="true">✦</span>
+            <p class="flip-card__prompt">Abre esto cuando el cansancio académico te gane </p>
+          </div>
+          <div class="flip-card__face flip-card__face--back">
+            <p class="flip-card__message">Veo todo tu esfuerzo, las noches en vela y las ganas inmensas que le pones a tus metas. Estoy profundamente orgulloso de ti. Pero recuerda que tu valor no depende de que todo salga perfecto. Si un día estás cansada y necesitas parar, está bien. Tu tranquilidad mental siempre será más importante.</p>
+          </div>
+        </div>
+      </button>
+
+      <button class="flip-card glass tulip-frame reveal" type="button" aria-expanded="false">
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__face--front">
+            <span class="flip-card__icon" aria-hidden="true">✦</span>
+            <p class="flip-card__prompt">Abre esto cuando extrañes a tu familia </p>
+          </div>
+          <div class="flip-card__face flip-card__face--back">
+            <p class="flip-card__message">Sé lo duro que es estar lejos de los tuyos y lo mucho que te preocupa tu abuelita. Aunque sé que no puedo reemplazar el abrazo de tu familia, quiero que recuerdes que aquí en Cuenca no estás sola. Mis brazos siempre estarán listos para sostenerte cada vez que la distancia te pese.</p>
+          </div>
+        </div>
+      </button>
+
+      <button class="flip-card glass tulip-frame reveal" type="button" aria-expanded="false">
+        <div class="flip-card__inner">
+          <div class="flip-card__face flip-card__face--front">
+            <span class="flip-card__icon" aria-hidden="true">✦</span>
+            <p class="flip-card__prompt">Abre esto cuando necesites respirar </p>
+          </div>
+          <div class="flip-card__face flip-card__face--back">
+            <p class="flip-card__message">Entiendo que a veces necesitas tu propio aire y tus momentos de desconexión. No tienes que sentirte presionada a estar disponible todo el tiempo. Cuando necesites tu espacio, tómalo con toda la tranquilidad del mundo, sabiendo que yo sigo aquí, apoyándote incondicionalmente.</p>
+          </div>
+        </div>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- LINTERNAS FLOTANTES / ESCENA ENREDADOS -->
+  <!-- ============================= -->
+  <section id="linternas" class="lanterns">
+    <div class="section-heading reveal">
+      <h2 class="section-title">El Mapa de Constelaciones</h2>
+      <p class="section-subtitle">Puntos de Certeza</p>
+    </div>
+
+    <div class="lanterns__scene">
+
+      <!-- Capa de fondo: linternas pequeñas, borrosas y lejanas (generadas por assets/js/script.js) -->
+      <div class="lanterns__bg-layer" id="lanternsBgLayer" aria-hidden="true"></div>
+
+      <!-- Capa inferior: reflejo del agua oscura -->
+      <div class="lanterns__water" aria-hidden="true">
+        <span class="lanterns__reflection lanterns__reflection--1"></span>
+        <span class="lanterns__reflection lanterns__reflection--2"></span>
+        <span class="lanterns__reflection lanterns__reflection--3"></span>
+      </div>
+
+      <!-- Capa media: silueta de la barca (SVG inline) -->
+      <svg class="lanterns__boat" viewBox="0 0 220 70" aria-hidden="true">
+        <path d="M92 30 C95 14 104 6 112 6 C120 6 129 14 132 30 Z" fill="#0b0620" opacity="0.9"/>
+        <path d="M15 42 Q112 68 209 42 L192 54 Q112 74 32 54 Z" fill="#0b0620"/>
+      </svg>
+
+      <!-- Capa superior: las 4 linternas grandes con las frases -->
+      <div class="lanterns__foreground">
+        <div class="lantern reveal lantern--1">
+          <span class="lantern__glow" aria-hidden="true"></span>
+          <p class="lantern__phrase"><!-- Reemplaza -->Mi apoyo hacia ti es incondicional, no un intercambio</p>
+        </div>
+
+        <div class="lantern reveal lantern--2">
+          <span class="lantern__glow" aria-hidden="true"></span>
+          <p class="lantern__phrase">Te admiro por cómo afrontas tus batallas, incluso aquellas que libras en silencio.</p>
+        </div>
+
+        <div class="lantern reveal lantern--3">
+          <span class="lantern__glow" aria-hidden="true"></span>
+          <p class="lantern__phrase">Estoy aquí para hacer tu carga más liviana, no para ser una presión más</p>
+        </div>
+
+        <div class="lantern reveal lantern--4">
+          <span class="lantern__glow" aria-hidden="true"></span>
+          <p class="lantern__phrase">No importa qué tan ruidoso o difícil se vuelva el mundo exterior, siempre buscaré ser un lugar de paz para ti</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer reveal">
+    <p><!-- Reemplaza -->Att: Chris, tu loco enamorado</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
